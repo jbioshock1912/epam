@@ -1,6 +1,5 @@
 package epam.hw2;
 
-import org.w3c.dom.ls.LSOutput;
 
 public abstract class AbstractCreature {
     private int attackDistance; //дальность атаки
