@@ -1,9 +1,5 @@
 package epam.topic_one.codingbat;
 
-import java.util.Arrays;
-import java.util.stream.LongStream;
-import java.util.stream.Stream;
-
 public class AllTasksWarmup1And2 {
 
     public boolean sleepIn(boolean weekday, boolean vacation) {

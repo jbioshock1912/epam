@@ -1,10 +1,5 @@
 package epam.topic_one.codingbat;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
 public class TasksFromArrayModule {
 
     public boolean firstLast6(int[] nums) {
