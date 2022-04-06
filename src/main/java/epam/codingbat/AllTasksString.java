@@ -30,7 +30,62 @@ public class AllTasksString {
         return str.length() > 1 && (str.substring(str.length() - 2).equals("ly"));
     }
 
+    public String seeColor(String str) {
+        String color = "";
+        if (str.startsWith("red")) {
+            color = "red";
+        }
+        if (str.startsWith("blue")) { // а если бы елс иф??
+            color = "blue";
+        }
+        return color;
+    }
 
+    public String extraFront(String str) {
+        String result = "";
+        if (str.length() > 1) {
+            result = str.substring(0, 2) + str.substring(0, 2) + str.substring(0, 2);
+        } else {
+            result = str + str + str;
+        }
+        return result;
+    }
+
+    public String makeAbba(String a, String b) {
+        return a + b + b + a;
+    }
+
+    public String extraEnd(String str) {
+        String result = "";
+        if (str.length() > 2) {
+            result = str.substring(str.length() - 2) + str.substring(str.length() - 2) + str.substring(str.length() - 2);
+        } else {
+            result = str + str + str;
+        }
+        return result;
+    }
+
+    public String withoutEnd(String str) {
+        return str.substring(1, str.length() - 1);
+
+    }
+
+    public String left2(String str) {
+        return str.substring(2) + str.substring(0, 2);
+    }
+
+    public String withouEnd2(String str) {
+        String result = "";
+        if (str.length() > 1) {
+            result = str.substring(1, str.length() - 1);
+        }
+        return result;
+    }
+
+}
 
 
 }
+
+
+
