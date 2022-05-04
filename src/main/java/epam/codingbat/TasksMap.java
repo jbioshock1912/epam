@@ -180,7 +180,7 @@ public class TasksMap {
             }
         }
         for (String key : mapforString.keySet()) {
-            if (mapforString.get(key) % 2 == 0) {
+              if (mapforString.get(key) % 2 == 0) {
                 int i = mapforString.get(key) / 2;
                         while (i > 0){
                             resultFromArray = resultFromArray + key;

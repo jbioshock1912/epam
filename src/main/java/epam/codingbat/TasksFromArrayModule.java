@@ -1,4 +1,4 @@
-package epam.topic_one.codingbat;
+package epam.codingbat;
 
 public class TasksFromArrayModule {
 
