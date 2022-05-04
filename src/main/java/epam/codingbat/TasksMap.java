@@ -1,4 +1,4 @@
-package epam.topic_one.codingbat;
+package epam.codingbat;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -97,15 +97,15 @@ public class TasksMap {
     }
 
     public Map<String, Integer> word0(String[] strings) {
-        Map<String, Integer> map = new HashMap();
-        for (int i = 0; i < strings.length; i++) {
-            map.put(strings[i], 0);
+        Map<String, Integer> map = new HashMap<>();
+        for (String string : strings) {
+            map.put(string, 0);
         }
         return map;
     }
 
     public Map<String, Integer> wordCount(String[] strings) {
-        Map<String, Integer> map = new HashMap();
+        Map<String, Integer> map = new HashMap<>();
         for (String string : strings) {
             if (map.containsKey(string)) {
                 int count = map.get(string);

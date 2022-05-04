@@ -6,8 +6,7 @@ public class AllTasksString {
     }
 
     public String makeOutWord(String out, String word) {
-        String result = out.substring(0, 2) + word + out.substring(2);
-        return result;
+        return out.substring(0, 2) + word + out.substring(2);
     }
 
     public String firstHalf(String str) {
@@ -27,15 +26,14 @@ public class AllTasksString {
     }
 
     public boolean endsLy(String str) {
-        return str.length() > 1 && (str.substring(str.length() - 2).equals("ly"));
+        return str.endsWith("ly");
     }
 
     public String seeColor(String str) {
         String color = "";
         if (str.startsWith("red")) {
             color = "red";
-        }
-        if (str.startsWith("blue")) { // а если бы елс иф??
+        } else if (str.startsWith("blue")) {
             color = "blue";
         }
         return color;
@@ -67,7 +65,6 @@ public class AllTasksString {
 
     public String withoutEnd(String str) {
         return str.substring(1, str.length() - 1);
-
     }
 
     public String left2(String str) {
@@ -90,44 +87,32 @@ public class AllTasksString {
     }
 
     public boolean hasBad(String str) {
-        boolean result = false;
-        if (str.startsWith("bad", 0) || str.startsWith("bad", 1)) {
-            result = true;
-        }
-        return result;
+        return str.startsWith("bad") || str.startsWith("bad", 1);
     }
 
     public String conCat(String a, String b) {
-        String result = "";
         if (a.length() > 0 && b.length() > 0 && a.charAt(a.length() - 1) == b.charAt(0)) {
-            result = a.substring(0, a.length() - 1) + b;
-        } else {
-            result = a + b;
+            a = a.substring(0, a.length() - 1);
         }
-        return result;
+        return a + b;
     }
 
     public boolean frontAgain(String str) {
-
         return str.length() >= 2 && str.substring(0, 2).equals(str.substring(str.length() - 2));
     }
 
     public String without2(String str) {
-        if (str.length() >= 2 && str.substring(0, 2).equals(str.substring(str.length() - 2)))
+        if (str.length() >= 2 && str.substring(0, 2).equals(str.substring(str.length() - 2))) {
             return str.substring(2);
+        }
         return str;
     }
 
     public String withoutX(String str) {
-        String result = str;
-        if (str.length() > 1 && str.charAt(0) == 'x' && str.charAt(str.length() - 1) == 'x') {
-            result = str.substring(1, str.length() - 1);
-        } else if (str.length() > 0 && str.charAt(0) == 'x') {
-            result = str.substring(1);
-        } else if (str.length() > 0 && str.charAt(str.length() - 1) == 'x') {
-            result = str.substring(0, str.length() - 1);
+        if (str.length() > 1 && str.charAt(0) == 'x') {
+            str = str.substring(1);
         }
-        return result;
+        return str.length() > 0 && str.charAt(str.length() - 1) == 'x' ? str.substring(0, str.length() - 1) : str;
     }
 
     public String makeTags(String tag, String word) {
@@ -174,10 +159,9 @@ public class AllTasksString {
             return str.substring(0, 2);
         } else if (str.length() == 1) {
             return str + "@";
-        } else if (str.equals("")) {
+        } else {
             return "@@";
         }
-        return str;
     }
 
   /*  public String lastTwo(String str) {
